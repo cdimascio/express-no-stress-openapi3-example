@@ -23,13 +23,14 @@ npm run dev
 npm run test
 ```
 
-## Differences from the express-no-stress generated app
+## Differences from the current express-no-stress generated app
 
-1. `Api.yaml` is converted to openapi3 and moved from `server/common/swagger` to `server/common`
-2. `server/common/swagger` has been removed
-3. `server/common/server.js` 
-  - removes is dependencies on swagger
-  - adds a dependency on [express-middleware-openapi](https://github.com/cdimascio/express-middleware-openapi) 
+1. `Api.yaml` is converted to OpenApi 3
+2. `Api.yaml` is moved from `server/common/swagger` to `server/common`
+3. `server/common/swagger` has been removed
+4. `server/common/server.js` has been edited to:
+  - remove its dependencies on swagger
+  - add a dependency on [express-middleware-openapi](https://github.com/cdimascio/express-middleware-openapi) 
 
 
 
