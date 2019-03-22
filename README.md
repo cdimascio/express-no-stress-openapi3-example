@@ -1,6 +1,6 @@
-# myapp
+# express-no-stress-openapi3-example
 
-My cool app
+This is a project i put together to test [express-middleware-openapi](https://github.com/cdimascio/express-middleware-openapi) using an [express-no-stress](https://github.com/cdimascio/generator-express-no-stress) scaffolded api
 
 ## Get Started
 
@@ -16,6 +16,15 @@ npm run dev
 # run tests
 npm run test
 ```
+
+## Differences from the express-no-stress generated app
+
+1. `Api.yaml` is converted to openapi3 and moved from `server/common/swagger` to `server/common`
+2. `server/common/swagger` has been removed
+3. `server/common/server.js` 
+  - removes is dependencies on swagger
+  - adds a dependency on [express-middleware-openapi](https://github.com/cdimascio/express-middleware-openapi) 
+
 
 ## Install Dependencies
 
