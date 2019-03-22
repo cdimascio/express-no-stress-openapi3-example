@@ -9,6 +9,10 @@ This is a project to demonstrate [express-middleware-openapi](https://github.com
 Get started developing...
 
 ```shell
+# clone this repo
+git clone https://github.com/cdimascio/express-no-stress-openapi3-example
+cd express-no-stress-openapi3-example
+
 # install deps
 npm install
 
