@@ -4,6 +4,7 @@ import * as bodyParser from 'body-parser';
 import * as http from 'http';
 import * as os from 'os';
 import cookieParser from 'cookie-parser';
+// 1. import express-middleware-openapi
 import { OpenApiMiddleware } from 'express-middleware-openapi';
 import l from './logger';
 
@@ -25,12 +26,16 @@ export default class ExpressServer {
     app.use(Express.static(`${root}/public`));
     app.use(process.env.SWAGGER_API_SPEC, Express.static(spec));
 
+    // 2. install the middleware
+    // see https://github.com/cdimascio/express-middleware-openapi for
+    // additional configuration options e.g. custom errors
     new OpenApiMiddleware({
       apiSpecPath: spec,
     }).install(app);
   }
 
   router(routes) {
+    // 3. apply user defined routes to app
     routes(app);
     return this;
   }
