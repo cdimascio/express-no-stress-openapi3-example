@@ -1,6 +1,8 @@
 # express-no-stress-openapi3-example
 
-This is a project i put together to test [express-middleware-openapi](https://github.com/cdimascio/express-middleware-openapi) using an [express-no-stress](https://github.com/cdimascio/generator-express-no-stress) scaffolded api
+This is a project to demonstrate [express-middleware-openapi](https://github.com/cdimascio/express-middleware-openapi) using an [express-no-stress](https://github.com/cdimascio/generator-express-no-stress) scaffolded api.
+
+[express-middleware-openapi](https://github.com/cdimascio/express-middleware-openapi) is a new middleware style validator for OpenApi 3.x and expressjs. I intend to include this validator as an option for [generator-express-no-stress](https://github.com/cdimascio/generator-express-no-stress). This project exists as an early proof of concept.
 
 ## Get Started
 
