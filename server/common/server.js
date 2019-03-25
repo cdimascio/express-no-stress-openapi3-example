@@ -4,7 +4,7 @@ import * as bodyParser from 'body-parser';
 import * as http from 'http';
 import * as os from 'os';
 import cookieParser from 'cookie-parser';
-import { OpenApiMiddleware } from 'express-middleware-openapi';
+import { OpenApiValidator } from 'express-openapi-validator';
 import l from './logger';
 
 const app = new Express();
@@ -25,7 +25,7 @@ export default class ExpressServer {
     app.use(Express.static(`${root}/public`));
     app.use(process.env.SWAGGER_API_SPEC, Express.static(spec));
 
-    new OpenApiMiddleware({
+    new OpenApiValidator({
       apiSpecPath: spec,
     }).install(app);
   }
